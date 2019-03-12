@@ -1,0 +1,52 @@
+<view class="body">
+  <view class="userinfo">
+  <view class="userinfo-avatar">
+  <open-data type="userAvatarUrl" ></open-data>
+  </view>
+  
+      <open-data type="userNickName" class="userinfo-nickname"></open-data>
+    <!--用户头像统计信息-->
+    <view class='user-data' style='flex-direction:row;'>
+      <view class='list'>
+      <view class='top'>{{sign_num}}</view>
+      <view class='bottom'>已连续打卡</view>
+      </view>
+      <view class='list'>
+      <view class='top'>{{days}}</view>
+      <view class='bottom'>总记账天数</view>
+      </view>
+      <view class='list'>
+      <view class='top'>{{count}}</view>
+      <view class='bottom'>总记账笔数</view>
+      </view>
+      </view>
+  </view>
+  <!--帐户的设置-->
+  <view class='user-setting'>
+   <view class='li' bindtap='userSign' data-url="">
+      <view class='img' ><image src='../../static/images/sign.png'></image></view>
+      <view class='text'>用户签到</view>
+      <view class='right'><image src='../../static/images/right.png'></image></view>
+    </view>
+    <navigator class='li' url="/pages/category/category">
+      <view class='img'><image src='../../static/images/setting.png'></image></view>
+      <view class='text'>分类设置</view>
+      <view class='right'><image src='../../static/images/right.png'></image></view>
+    </navigator> 
+    
+     <navigator class='li' url="/pages/charge/list">
+      <view class='img'><image src='../../static/images/account_list1.png'></image></view>
+      <view class='text'>我的账单</view>
+      <view class='right'><image src='../../static/images/right.png'></image></view>
+    </navigator>
+     <navigator class='li' url="/pages/about/about">
+      <view class='img'><image src='../../static/images/about_our.png'></image></view>
+      <view class='text'>关于小默记账</view>
+      <view class='right'><image src='../../static/images/right.png'></image></view>
+    </navigator>
+  </view>
+  <view class='user-bottom'>
+  <button type='warn' open-type='share'>推荐给好友</button>
+  <button type='warn' style="margin-top:20rpx;" bindgetuserinfo="getuserinfo" open-type='getUserInfo'>更新用户</button>
+  </view>
+</view>

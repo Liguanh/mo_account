@@ -1,0 +1,9 @@
+<!--pages/about/about.wxml-->
+<view>
+<view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="../../static/images/logo1.png" mode="cover"></image>
+      <text class="userinfo-nickname">小默记账</text>
+
+      <text style='width:90%;text-indent:20rpx;font-weight: light;font-size: 25rpx;color:#808080;margin-top: 30rpx;'> 小默记账是一款记账的小程序，可以记录你支出或收入明细，可以自定义分类，查看流水，查看个人的数据统计等信息.......</text>
+</view>
+</view>

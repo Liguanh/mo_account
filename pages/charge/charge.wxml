@@ -1,0 +1,90 @@
+<!--pages/charge/charge.wxml-->
+<view style='z-index:100;'>
+<form bindsubmit='saveChargeInfo'>
+<!--第一栏-->
+<view class='charge_box'>
+  <view class='form-group'>
+    <view class='left'>记账时间:</view>
+    <view class='right'>
+      <picker mode="date" name="charge_date" value='{{current_date}}' start="2015-01-01" end="2038-12-31"  bindchange='chargeDate'>
+        <view class='.picker'>{{current_date}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='form-group'>
+    <view class='left'>记账类别:</view>
+    <view class='right'>
+      <radio-group bindchange="set_charge_type" name="c_type">
+      <radio  value='1' checked/>支出   
+      <radio  value='2'/>收入
+      </radio-group>
+    </view>
+  </view>
+</view>
+
+<!--第一栏-->
+<!--第二栏-->
+  <view class='charge_box'>
+     <view class='form-group'>
+        <view class='left'>记账类型:</view>
+        <view class='right'>
+          <picker name="category_id" value='{{category_list[index].id}}' range-key="cate_name" range='{{category_list}}' bindchange="selectCategory">
+            <view class='.picker'>{{category_list[index].cate_name}}</view>
+          </picker>
+        </view>
+     </view>
+     <view class='form-group'>
+        <view class='left'>金额:</view>
+        <view class='right'>
+          <input name="amount" class='cal_input' value='{{result}}' disabled bindtap="show_cal" ></input>
+        </view>
+     </view>
+     <view class='form-textarea'>
+        <view class='right' style='width:100%;'>
+          <textarea name="note" placeholder='可输入记账的备注信息' cursor-spacing="70" />
+        </view>
+     </view>
+  </view>
+<!--第二栏-->
+
+<!--第三栏-->
+<view class='charge-bottom'>
+<view wx:if="{{is_show_error}}" class='error'>{{error_msg}}</view>
+<button type='warn' form-type='submit' loading='{{loading}}'>确定</button>
+</view>
+<!--第三栏-->
+</form>
+
+<!--计算器-->
+<view class='test-bg' wx:if="{{completeCalculate == false}}">
+<view class='btnGroup'>
+  <view class='item black' bindtap='clickButton' id="{{id7}}">7</view>
+  <view class='item black' bindtap='clickButton' id="{{id8}}">8</view>
+  <view class='item black' bindtap='clickButton' id="{{id9}}">9</view>
+<view class='item black' bindtap='clickButton' id="{{sub}}">-</view>
+</view>
+
+<view class='btnGroup'>
+<view class='item black' bindtap='clickButton' id="{{id4}}">4</view>
+<view class='item black' bindtap='clickButton' id="{{id5}}">5</view>
+<view class='item black' bindtap='clickButton' id="{{id6}}">6</view>
+<view class='item black' bindtap='clickButton' id="{{add}}">+</view>
+</view>
+
+<view class='btnGroup'>
+<view class='item black' bindtap='clickButton' id="{{id1}}">1</view>
+<view class='item black' bindtap='clickButton' id="{{id2}}">2</view>
+<view class='item black' bindtap='clickButton' id="{{id3}}">3</view>
+<view class='item black' bindtap='clickButton' id="{{equ}}">确定</view>
+</view>
+<view class='btnGroup'>
+<view class='item black' bindtap='clickButton' id="{{dot}}">.</view>
+<view class='item black' bindtap='clickButton' id="{{id0}}">0</view>
+<view class='item black' bindtap='clickButton' id="{{C}}">C</view>
+<view class='item black' bindtap='clickButton' id="{{back}}">Back</view>
+</view>
+
+</view>
+
+</view>
+

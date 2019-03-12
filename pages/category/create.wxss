@@ -1,0 +1,24 @@
+/* pages/category/create.wxss */
+@import "../charge/charge.wxss";
+
+.charge_box{
+  margin-top: 0rpx;
+}
+
+.category-bottom{
+  position: fixed;
+  float: left;
+  width: 100%;
+  bottom: 60rpx;
+  text-align: center;
+}
+.category-bottom .error{
+  width: 100%;
+  font-size: 25rpx;
+  color: #ff0000;
+  margin-bottom: 20rpx;
+}
+.category-bottom button{
+  width: 80%;
+  margin-top:30rpx;
+}

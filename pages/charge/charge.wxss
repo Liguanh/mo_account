@@ -1,0 +1,121 @@
+/* pages/charge/charge.wxss */
+page{
+background-color:#f0f0f0;
+height:100%;
+font-size: 32rpx;
+}
+
+/**表单box**/
+.charge_box{
+  float: left;
+  width: 100%;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 20rpx;
+}
+.form-group{
+  float:left;
+  width: 100%;
+  background: #ffffff;
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1px solid #f0f0f0; 
+}
+.left{
+  float: left;
+  font-size: 30rpx;
+  width: 22%;
+  text-align: right;
+  padding-left: 3%;
+}
+.right{
+  float: left;
+  width: 70%;
+  align-items: center;
+  padding-left: 5%;
+  font-size: 30rpx;
+  color: #707070;
+}
+.right input {
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 25rpx;
+}
+.right .cal_input{
+  font-size: 35rpx;
+  color: #FF6347;
+}
+.right .picker {
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 25rpx;
+  color: #707070;
+}
+
+.right textarea{
+  height: 150rpx;
+  margin-top: 25rpx;
+}
+
+.form-textarea{
+  float:left;
+  width: 100%;
+  background: #ffffff;
+  height: 200rpx;
+  line-height: 200rpx;
+  border-bottom: 1px solid #f0f0f0; 
+}
+
+.charge-bottom{
+  position: fixed;
+  float: left;
+  width: 100%;
+  bottom: 50rpx;
+  text-align: center;
+}
+.charge-bottom .error{
+  width: 100%;
+  font-size: 25rpx;
+  color: #ff0000;
+  margin-bottom: 20rpx;
+}
+.charge-bottom button{
+  width: 90%;
+}
+/**表单box**/
+
+
+/** 计算器的颜色 */
+.test-bg{
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  border-top: solid 1px #d4d4d4;
+  bottom: 0rpx;
+}
+
+.bg-image{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.2);
+}
+
+.btnGroup{
+  display: flex;
+  flex-direction: row;
+}
+
+.item{
+width: 25%;
+min-height: 60rpx;
+text-align: center;
+line-height: 100rpx;
+}
+
+.black{
+  color: #303030;
+  border-left: solid 1px #d4d4d4;
+  border-bottom: solid 1px #d4d4d4;
+  background: #fff;
+
+}

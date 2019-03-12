@@ -1,0 +1,40 @@
+<!--pages/home/home.wxml-->
+<view>
+
+<view class="home-top">
+      <text class="userinfo-nickname">总支出(元)</text>
+      <view class="userinfo-avatar">{{pay_out}}</view>
+    <!--用户头像统计信息-->
+    <view class='user-data' style='flex-direction:row;'>
+      <view class='list'>
+      <view class='top'>{{income}}</view>
+      <view class='bottom'>总收入</view>
+      </view>
+      <view class='list'>
+       <view class='middle'> | </view>
+      </view>
+      <view class='list'>
+      <view class='top'>{{left}}</view>
+      <view class='bottom'>结余</view>
+      </view>
+      </view>
+  </view>
+  
+  <view class='record-list' id="{{item.id}}" bindlongpress="removeRecord" wx:for="{{home_charge_record}}">
+  <view class='top-list'>
+    <view class='top-image'><image src='../../static/images/date.png'></image></view>
+    <view class='top-left'>{{item.charge_date}}</view>
+    <view class='top-right' wx:if="{{item.c_type==1}}">花费: {{item.amount}}</view>
+    <view class='top-right' wx:else>收入: {{item.amount}}</view>
+  </view>
+  <view class='bottom-list'>
+    <view class='bottom-image'><image src='../../static/images/account_list.png'></image></view>
+    <view class='bottom-left'>
+      <view class='bottom-left-top'>{{item.cate_name}}</view>
+      <view class='bottom-left-bottom'>{{item.note}}</view>
+    </view>
+    <view class='bottom-right'>{{item.amount}}</view>
+  </view>
+</view>
+</view>
+

@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/charge/charge",
+    "pages/category/category",
+    "pages/category/create",
+    "pages/charge/list",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFD700",
+    "navigationBarTitleText": "小默记账",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": true
+  },
+  "tabBar": {
+    "color": "#303030",
+    "backgroudColor": "#fff",
+    "selectedColor": "#FF6347",
+    "list": [
+      {
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home1.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "iconPath": "static/images/add_charge.png",
+        "selectedIconPath": "static/images/add_charge1.png",
+        "pagePath": "pages/charge/charge",
+        "text": "记账"
+      },
+      {
+        "iconPath": "static/images/user.png",
+        "selectedIconPath": "static/images/user1.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": true
+}

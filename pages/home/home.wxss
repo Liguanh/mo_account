@@ -1,0 +1,130 @@
+/* pages/home/home.wxss */
+.banner_image{
+  width: 100%;
+}
+/** 首页顶部 */
+.home-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:#FFD700;
+  padding-bottom: 20rpx; 
+}
+.userinfo-avatar {
+  margin-top: 30rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.userinfo-nickname {
+  font-size: 30rpx;
+  font-weight: light;
+  margin-top: 30rpx;
+}
+
+/*帐户中心数据统计*/
+.user-data {
+  width: 100%;
+  margin-top:20rpx;
+  height: 100rpx;
+  text-align: center;
+}
+.user-data .list {
+  float: left;
+  text-align: center;
+  width: 33.33%;
+}
+.user-data .list .top{
+  font-size: 35rpx;
+  margin-bottom: 5rpx;
+  font-weight: bold;
+}
+.user-data .list .bottom{
+  font-size: 28rpx;
+  font-weight: light;
+}
+
+.user-data .list .middle{
+  height: 100rpx;
+  font-size: 60rpx;
+  font-weight: light;
+}
+
+/** 账单列表 */
+.record-list{
+  float:left;
+  width: 100%;
+  background: #ffffff;
+  height: 150rpx;
+  line-height: 150rpx;
+  border-bottom: 1px solid #dfdfdf; 
+  margin-bottom: 10rpx;
+}
+.top-list{
+  float:left;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #808080;
+  font-size: 25rpx;
+}
+.top-image{
+  float:left;
+  text-align: center;
+  width: 7%;
+}
+.top-image image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 15rpx;
+}
+.top-left{
+  float:left;
+  text-align: left;
+  width: 30%;
+}
+.top-right{
+  float: left;
+  text-align: right;
+  padding-right:10%; 
+  width: 53%;
+}
+.bottom-list{
+  float:left;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.bottom-image{
+  float:left;
+  text-align: center;
+  width: 12%;
+}
+.bottom-image image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 15rpx;
+}
+.bottom-left{
+  float:left;
+  text-align: left;
+  width: 30%;
+}
+.bottom-left-top{
+  font-size:30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.bottom-left-bottom{
+  font-size:23rpx;
+  color: #b0b0b0;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.bottom-right{
+  float: left;
+  text-align: right;
+  font-size: 35rpx;
+  color: #FF6347;
+  padding-right:12%; 
+  width: 46%;
+}

@@ -1,0 +1,27 @@
+<!--pages/charge/list.wxml-->
+<view>
+<view class='topBar'>
+    <picker class='searchInput' mode="date" name="charge_date" value='{{current_date}}' fields="year" fields="month" start="2015-01-01" end="2038-12-31" bindchange='selectDate'>
+      <view>{{current_date}}</view>
+    </picker>
+    <picker class='searchInput' name="c_type" value='index' range-key="name" range='{{c_type}}' bindchange='selectType'>
+      <view>{{c_type[index].name}}</view>
+    </picker>
+</view>
+<view class='record-list' wx:for="{{charge_record}}" bindlongpress="removeRecord" id="{{item.id}}">
+  <view class='top-list'>
+    <view class='top-image'><image src='../../static/images/date.png'></image></view>
+    <view class='top-left'>{{item.charge_date}}</view>
+    <view class='top-right' wx:if="{{item.c_type==1}}">花费: {{item.amount}}</view>
+    <view class='top-right' wx:else>收入: {{item.amount}}</view>
+  </view>
+  <view class='bottom-list'>
+    <view class='bottom-image'><image src='../../static/images/account_list.png'></image></view>
+    <view class='bottom-left'>
+      <view class='bottom-left-top'>{{item.cate_name}}</view>
+      <view class='bottom-left-bottom'>{{item.note}}</view>
+    </view>
+    <view class='bottom-right'>{{item.amount}}</view>
+  </view>
+</view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/category/category.wxml-->
+<view>
+  <view class='topBar'>
+    <view class='changeBtn' wx:if="{{show_type == 1}}">
+      <view class="leftactive">支出分类</view>
+      <view class="rightdefault" data-type="2" bindtap="changeType">收入分类</view>
+    </view>
+    <view class='changeBtn' wx:else>
+      <view class="leftdefault" data-type="1" bindtap="changeType">支出分类</view>
+      <view class="rightactive">收入分类</view>
+    </view>
+  </view>
+
+  <view class="category-list" wx:for="{{category_list}}">
+    <view class='left'> <image src='../../static/images/right.png'></image> </view>
+    <view class='text'>{{item.cate_name}}</view>
+    <view class='right' id="{{item.id}}" bindtap='handleCategory'>...</view>
+  </view>
+  <navigator class='category-bottom' url='{{"/pages/category/create?type="+show_type}}'>
+    <button type="warn">添加分类</button>
+  </navigator>
+</view>
